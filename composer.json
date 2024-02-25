@@ -1,0 +1,15 @@
+{
+    "name": "joseph/js-preload-resources",
+    "autoload": {
+        "psr-4": {
+            "JsPreloadResources\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joseph Safarzade",
+            "email": "Jo.safarzade@gmail.com"
+        }
+    ],
+    "require": {}
+}

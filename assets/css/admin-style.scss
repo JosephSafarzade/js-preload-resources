@@ -1,0 +1,41 @@
+#js-pr-re-global-resources{
+
+  hr{
+
+    margin: 15px 0;
+
+  }
+
+
+  select{
+
+    margin-left: 15px;
+
+  }
+
+  input[type=url]{
+
+      min-width: 600px;
+      margin-left: 15px;
+
+  }
+
+
+  input[type=submit]{
+
+    background: #0b8bf3 ;
+    color: #ffffff;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 9px 30px;
+    transition: all ease-out 0.2s;
+    &:hover{
+      background-color: #2271b1;
+    }
+
+  }
+
+
+
+}

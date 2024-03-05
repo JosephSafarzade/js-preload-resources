@@ -12,6 +12,10 @@ License: GPLv2 or later
 Text Domain: js-preload-resources
 */
 
+
+if (!defined('ABSPATH')) die('No direct access allowed');
+
+
 if( ! function_exists('get_plugin_data') ){
 
     require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -36,12 +40,11 @@ define('JS_PR_RE_PLUGIN_ASSETS_JS_URL'      , JS_PR_RE_PLUGIN_ASSETS_URL . "js/"
 
 require_once JS_PR_RE_PLUGIN_ROOT_DIR . "/vendor/autoload.php";
 
-
-
 \JsPreloadResources\core::define_hooks();
 
 \JsPreloadResources\scripts::define_hooks();
 
 \JsPreloadResources\admin_page::define_hooks();
 
+\JsPreloadResources\metabox::define_hooks();
 

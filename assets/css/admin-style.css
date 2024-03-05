@@ -21,4 +21,12 @@
   background-color: #2271b1;
 }
 
+.js-pr-re-metabox-input-container {
+  margin: 20px 0;
+}
+.js-pr-re-metabox-input-container select {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=admin-style.css.map */

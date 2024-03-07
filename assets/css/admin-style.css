@@ -1,12 +1,12 @@
+#js-pr-re-global-resources {
+  max-width: 90%;
+}
 #js-pr-re-global-resources hr {
   margin: 15px 0;
 }
 #js-pr-re-global-resources select {
-  margin-left: 15px;
-}
-#js-pr-re-global-resources input[type=url] {
-  min-width: 600px;
-  margin-left: 15px;
+  max-width: 100%;
+  min-width: 200px;
 }
 #js-pr-re-global-resources input[type=submit] {
   background: #0b8bf3;
@@ -22,11 +22,48 @@
 }
 
 .js-pr-re-metabox-input-container {
-  margin: 20px 0;
+  margin: 20px 0 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
-.js-pr-re-metabox-input-container select {
-  margin-left: 10px;
-  margin-right: 10px;
+.js-pr-re-metabox-input-container .js-pr-re-single-input-container {
+  max-width: 200px;
+}
+.js-pr-re-metabox-input-container .js-pr-re-single-input-container label {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  .js-pr-re-metabox-input-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 699px) {
+  .js-pr-re-metabox-input-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.postbox-container .js-pr-re-metabox-input-container select {
+  min-width: 200px;
+}
+@media (min-width: 1001px) and (max-width: 1366px) {
+  .postbox-container .js-pr-re-metabox-input-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  .postbox-container .js-pr-re-metabox-input-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 699px) {
+  .postbox-container .js-pr-re-metabox-input-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=admin-style.css.map */

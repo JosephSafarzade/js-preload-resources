@@ -49,7 +49,9 @@
 
             $value = JsPreloadResources\core::get_plugin_setting_page_fields_values();
 
-            JsPreloadResources\admin_page::render_plugin_setting_page_fields( json_decode($value,true) );
+            $value = $value == '' ? [] : json_decode($value,true);
+
+            JsPreloadResources\admin_page::render_plugin_setting_page_fields( $value );
 
         }
 

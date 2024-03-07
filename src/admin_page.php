@@ -5,57 +5,48 @@ namespace JsPreloadResources;
 class admin_page
 {
 
+
+    /**
+     * Define required hook for admin_page class , this is an entry point of class
+     *
+     * we use 'admin_menu' hook to define function responsible for adding admin submenu for global setting fields
+     *
+     *
+     * @return void
+     */
     public static function define_hooks(){
 
 
-        add_action('admin_menu', array('JsPreloadResources\admin_page', 'add_plugin_setting_page'));
+        add_action('admin_menu', function(){
+
+            add_submenu_page(
+                'options-general.php',
+                __('Preload & Prefetch Settings',JS_PR_RE_PLUGIN_TEXTDOMAIN),
+                __('Preload & Prefetch Settings',JS_PR_RE_PLUGIN_TEXTDOMAIN),
+                'manage_options',
+                'preload-and-prefetch-settings',
+                function (){
+                    require_once (JS_PR_RE_PLUGIN_ROOT_DIR . "templates/admin-setting-page.php");
+                }
+            );
+
+        } );
 
 
     }
 
 
-
-
-    public static function add_plugin_setting_page(){
-
-
-        add_submenu_page(
-            'options-general.php',
-            'Preload & Prefetch Settings',
-            'Preload & Prefetch Settings',
-            'manage_options',
-            'preload-and-prefetch-settings',
-            function (){
-                require_once (JS_PR_RE_PLUGIN_ROOT_DIR . "templates/admin-setting-page.php");
-            }
-        );
-
-
-    }
-
-
+    /**
+     * called by add_submenu_page , this function is responsible for rendering global setting admin page content
+     *
+     *
+     * @return void
+     */
     public static function render_plugin_setting_page_fields($current_values){
 
         printf("<input type='hidden' name='js-pr-re-global-setting'>");
 
-        for ($i = 1; $i < 11; $i++) {
-
-            $value = isset($current_values[$i]) ?
-                $current_values[$i] :
-                core::return_default_values_for_global_resources_setting_fields();
-
-            core::render_resource_name_input_in_admin_setting_page($i , $value['name']);
-
-            core::render_resource_type_drop_down_in_admin_setting_page($i , $value['type']);
-
-            core::render_resource_load_type_drop_down_in_admin_setting_page($i , $value['load']);
-
-            core::render_resource_url_input_in_admin_setting_page($i , $value['url']);
-
-            printf("<hr/>");
-
-        }
-
+        core::render_inputs_for_resources($current_values);
 
     }
 

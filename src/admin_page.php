@@ -21,8 +21,8 @@ class admin_page
 
             add_submenu_page(
                 'options-general.php',
-                __('Preload & Prefetch Settings',JS_PR_RE_PLUGIN_TEXTDOMAIN),
-                __('Preload & Prefetch Settings',JS_PR_RE_PLUGIN_TEXTDOMAIN),
+                __('Preload & Prefetch Settings','js-preload-resources'),
+                __('Preload & Prefetch Settings','js-preload-resources'),
                 'manage_options',
                 'preload-and-prefetch-settings',
                 function (){

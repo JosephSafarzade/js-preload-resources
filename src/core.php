@@ -290,7 +290,7 @@ class core
                 <label>%s :</label>
                 <input type='url' name='resource[%s][url]' placeholder='%s' value='%s'>
             </div>",
-            __('Resource URL' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource URL' , 'js-preload-resources'),
             $counter,
             __('Resource URL','js-preload-resources'),
             esc_attr($current_value)
@@ -321,7 +321,7 @@ class core
                 <label>%s :</label>
                 <input type='text' name='resource[%s][name]' placeholder='%s' value='%s'>
             </div>",
-            __('Resource Name' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Name' , 'js-preload-resources'),
             $counter ,
             __('Resource Name','js-preload-resources'),
             esc_attr($current_value)
@@ -368,7 +368,7 @@ class core
             "<div class='js-pr-re-single-input-container'>
                         <label>%s :</label><br />
                         <select name='resource[%s][type]'>",
-            __('Resource Type' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Type' , 'js-preload-resources'),
             $counter
         );
 
@@ -423,7 +423,7 @@ class core
             "<div class='js-pr-re-single-input-container'>
                         <label>%s :</label><br />
                         <select name='resource[%s][load]'>",
-            __('Resource Load Type' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Load Type' , 'js-preload-resources'),
             $counter
         );
 
@@ -480,7 +480,7 @@ class core
             "<div class='js-pr-re-single-input-container'>
                         <label>%s :</label><br />
                         <select name='resource[%s][cross]'>",
-            __('Resource Cross Mode' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Cross Mode' , 'js-preload-resources'),
             $counter
         );
 
@@ -535,7 +535,7 @@ class core
             "<div class='js-pr-re-single-input-container'>
                         <label>%s :</label><br />
                         <select name='resource[%s][priority]'>",
-            __('Resource Priority' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Priority' , 'js-preload-resources'),
             $counter
         );
 
@@ -585,7 +585,7 @@ class core
             "<div class='js-pr-re-single-input-container'>
                         <label>%s :</label><br />
                         <select name='resource[%s][mime_type]'>",
-            __('Resource Mime Type' , JS_PR_RE_PLUGIN_TEXTDOMAIN),
+            __('Resource Mime Type' , 'js-preload-resources'),
             $counter
         );
 

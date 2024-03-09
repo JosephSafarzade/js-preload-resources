@@ -1,6 +1,6 @@
 <h1 class="js-pr-re-setting-heading">
 
-    <?php _e('Global Preload Settings','js-preload-resources'); ?>
+    <?php esc_html_e('Global Preload Settings','js-preload-resources'); ?>
 
 </h1>
 
@@ -10,7 +10,7 @@
 
     <?php
 
-        _e(
+        esc_html_e(
             'Here you can define up to 10 global preload or prefetch resources ,
              they will load globally regardless of what page
             user is visiting ',
@@ -61,4 +61,3 @@
     <input type="submit">
 
 </form>
-
